@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <el-button type="info" @click="onlogout">退出</el-button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Home',
+  methods: {
+    onlogout () {
+      window.sessionStorage.clear()
+      this.$router.push('/login')
+    }
+  }
+}
+</script>
+
+<style lang="less" scoped>
+</style>
